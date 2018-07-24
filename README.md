@@ -70,18 +70,18 @@ All URIs are relative to *https://api.aspose.cloud/v1.0*.
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*StorageApi* | [**delete_file**] | **DELETE** /storage/file | Remove a specific file
-*StorageApi* | [**delete_folder**] | **DELETE** /storage/folder | Remove a specific folder
-*StorageApi* | [**get_disc_usage**] | **GET** /storage/disc | Check the disk usage of the current account
-*StorageApi* | [**get_download**] | **GET** /storage/file | Download a specific file
-*StorageApi* | [**get_is_exist**] | **GET** /storage/exist | Check if a specific file or folder exists
-*StorageApi* | [**get_is_storage_exist**] | **GET** /storage/{name}/exist | Check if storage exists
-*StorageApi* | [**get_list_file_versions**] | **GET** /storage/version | Get the file&#39;s versions list
-*StorageApi* | [**get_list_files**] | **GET** /storage/folder | Get the file listing of a specific folder
-*StorageApi* | [**post_move_file**] | **POST** /storage/file | Move a specific file
-*StorageApi* | [**post_move_folder**] | **POST** /storage/folder | Move a specific folder
-*StorageApi* | [**put_create**] | **PUT** /storage/file | Upload a specific file
-*StorageApi* | [**put_create_folder**] | **PUT** /storage/folder | Create the folder
+*StorageApi* | **delete_file** | **DELETE** /storage/file | Remove a specific file
+*StorageApi* | **delete_folder** | **DELETE** /storage/folder | Remove a specific folder
+*StorageApi* | **get_disc_usage** | **GET** /storage/disc | Check the disk usage of the current account
+*StorageApi* | **get_download** | **GET** /storage/file | Download a specific file
+*StorageApi* | **get_is_exist** | **GET** /storage/exist | Check if a specific file or folder exists
+*StorageApi* | **get_is_storage_exist** | **GET** /storage/{name}/exist | Check if storage exists
+*StorageApi* | **get_list_file_versions** | **GET** /storage/version | Get the file&#39;s versions list
+*StorageApi* | **get_list_files** | **GET** /storage/folder | Get the file listing of a specific folder
+*StorageApi* | **post_move_file** | **POST** /storage/file | Move a specific file
+*StorageApi* | **post_move_folder** | **POST** /storage/folder | Move a specific folder
+*StorageApi* | **put_create** | **PUT** /storage/file | Upload a specific file
+*StorageApi* | **put_create_folder** | **PUT** /storage/folder | Create the folder
 
 
 ## Documentation For Authorization
