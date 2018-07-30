@@ -98,7 +98,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'Swagger-Codegen/1.0.5/python'
+        self.user_agent = 'Swagger-Codegen/1.0.6/python'
         self.refresh_token = ""
         self.access_token_api_call = False
         self.get_access_token()
@@ -206,10 +206,12 @@ class ApiClient(object):
 
         # request url
         if not self.access_token_api_call:
-            url = self.configuration.base_url + resource_path
+            url = (self.configuration.base_url + resource_path).encode('utf8') \
+                if not PY3 else self.configuration.base_url + resource_path
             header_params['Authorization'] = self.refresh_token
         else:
-            url = self.configuration.host + resource_path
+            url = (self.configuration.host + resource_path).encode('utf8') \
+                if not PY3 else self.configuration.host + resource_path
 
         # perform request and return response
         try:
@@ -225,7 +227,7 @@ class ApiClient(object):
                 # Access token has expired, obtain new access token
                 self.get_access_token()
                 msg = "Access token was expired. Obtained new Access token. Please call API again"
-            
+
             raise ApiException(status=e.status, reason=msg)
 
         self.last_response = response_data
@@ -302,6 +304,8 @@ class ApiClient(object):
             return self.__deserialize_file(response)
 
         # fetch data from response object
+        if PY3:
+            response.data = response.data.decode('utf8')
         try:
             data = json.loads(response.data)
         except ValueError:
@@ -619,7 +623,9 @@ class ApiClient(object):
         try:
             return klass(data)
         except UnicodeEncodeError:
-            return str(data)
+            if not PY3:
+                return data.encode('utf8')
+            return data
         except TypeError:
             return data
 
