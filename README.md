@@ -107,7 +107,12 @@ Class | Method | HTTP request | Description
 - **Location**: URL query string
 
 
-## Author
+## Resources
++ [**Web API reference**](https://apireference.aspose.cloud/storage/)
++ [**Website**](https://www.aspose.cloud/)
++ [**Documentation**](https://docs.aspose.cloud/display/storagecloud/Home)
++ [**Free Support Forum**](https://forum.aspose.cloud/c/storage)
++ [**Paid Support Helpdesk**](https://helpdesk.aspose.cloud/)
 
 
 
